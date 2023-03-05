@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+body {
+    margin: 0;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container {
+    padding: 5% 25%;
+    height: 100vh;
+
+    background-color: rgb(18, 18, 53);
+}
+
+.formulario {
+
+    width: 90%;
+    height: 90%;
+
+    padding: 10px;
+
+    border: 2px solid rgb(69, 1, 255);
+
+    animation: borderBoxColor 2s ease-in-out infinite;
+
+    display: flex;
+    align-items: start;
+    align-content: center;
+    flex-direction: column;
+
+    background-color: rgb(60, 67, 100);
+    border-radius: 6px;
+
+}
+
+.formulario * {
+    display: block;
+    margin: 5px;
+}
+
+form {
+    display: inline-block;
+    width: 95%;
+    padding-left: 15px;
+}
+
+label {
+    font-size: 17px;
+    font-style: bold;
+    color: aliceblue;
+    font-family: 'Oxygen', sans-serif;
+}
+
+input {
+    border-radius: 20px;
+    width: 90%;
+    height: 28px;
+
+    background-color: rgb(31, 31, 31);
+    color: white;
+    border: none;
+
+    padding: 10px;
+
+    box-shadow: inset 0px 0px 0px;
+    transition: box-shadow 0.7s ease, outline 0.5s linear;
+}
+
+input:hover {
+    box-shadow: inset 0px 0px 50px rgb(179, 179, 230);
+}
+
+input::placeholder {
+    transition: color 0.5s linear;
+}
+
+input:hover::placeholder {
+    color: rgb(0, 0, 0);
+}
+
+#submit {
+    border: none;
+    border-radius: 15px;
+
+    width: 50%;
+    height: 8%;
+
+    margin: 5% 25%;
+    box-shadow: 0px 0px 4px;
+    transition: box-shadow 0.5s linear;
+
+    font-size: 18px;
+
+    background-color: rgb(31, 31, 31);
+    color: white;
+
+    font-style: bold;
+}
+
+#submit:hover {
+    box-shadow: 0px 0px 12px;
+}
+
+@keyframes borderBoxColor {
+    0% {
+        box-shadow: -3px 1px 16px blue;
+    }
+
+    25% {
+        box-shadow: 1px 3px 16px blue;
+    }
+
+    50% {
+        box-shadow: 3px 1px 16px blue;
+    }
+
+    75% {
+        box-shadow: 1px -3px 16px blue;
+    }
+
+    100% {
+        box-shadow: -3px 1px 16px blue;
+    }
+}
+
+@media (max-width: 900px) {
+
+    .container {
+        height: 100vh; 
+        padding: 30px 20px 10px 40px;
+
+    }
+
+    .formulario {
+        height: 75%;
+        width: 95%;
+
+        margin: 0;
+
+        font-size: 16px
+    }
+
+    .formulario * {
+        display: block;
+        margin: 4px 2px;
+    }
+
+    form {
+        display: inline-block;
+        width: 95%;
+        padding-left: 3px;
+    }
+
+    input{
+        width: 98%;
+    }
+
+    #submit{
+
+        width: 80%;
+        font-size: 12px;
+
+        margin: 10% 10%;
+    }
+}
